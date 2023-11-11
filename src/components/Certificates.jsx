@@ -36,8 +36,8 @@ const Certifications = () => {
           <h2 className='text-4xl font-bold text-center mb-6'>
             Certifications
             <div
-              className={`h-1 bg-purple-600 transition-all duration-700 ${
-                inView ? 'w-full md:w-3/4' : 'w-0'
+              className={`h-1 bg-white transition-all duration-700 ${
+                inView ? 'w-[10em] md:w-[8em]' : 'w-0'
               } mx-auto mt-2`}
               style={{ transitionDelay: '300ms' }}
             />
@@ -67,7 +67,7 @@ const Certifications = () => {
                     href={cert.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-purple-500 hover:text-purple-300 transition-colors duration-300 p-2 hover:bg-gray-500 rounded-full'
+                    className='hover:bg-purpleLighter bg-purple transition-colors duration-300 p-2 rounded-full text-white'
                   >
                     View Certificate
                   </a>
