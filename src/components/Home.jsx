@@ -4,6 +4,9 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Skills from './Skills';
 import Footer from './Footer';
+import Socials from './Socials';
+import Projects from './Projects';
+import Certifications from './Certificates';
 
 const Home = () => {
   return (
@@ -11,6 +14,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Skills />
+      <Projects />
+      <Certifications />
+      <Socials />
       <Footer />
     </div>
   );

@@ -9,6 +9,8 @@ module.exports = {
         textLight: '#f5f5f5',
         purple: '#7d2ae8',
         purpleLighter: '#9f6ee8',
+        instagramStart: '#fdf497',
+        instagramEnd: '#d6249f',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

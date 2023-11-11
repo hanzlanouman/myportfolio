@@ -6,7 +6,8 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className='bg-[#121212] text-white'>
-      <div className='container mx-auto px-4 py-10'>
+      {/* <div className='border-t border-gray-700 text-center mt-10'></div> */}
+      <div className='container mx-auto px-4 py-0'>
         <div className='flex flex-wrap justify-between items-center'>
           <div className='w-full lg:w-1/2 mb-6 lg:mb-0'>
             <Logo font='font-logoArfah' text='Arfah' />
