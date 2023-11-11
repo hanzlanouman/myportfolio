@@ -1,3 +1,51 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .loading {
+    animation: swipeUp 1.5s forwards;
+  }
+}
+
+@keyframes swipeUp {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@layer utilities {
+  .line-grow-center {
+    @apply relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      background-color: currentColor;
+      width: 0;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+  .line-grow-center.in-view:after {
+    width: 100%;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}

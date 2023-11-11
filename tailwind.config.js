@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
         logo: ['Open Sans', 'sans-serif'],
+        logoArfah: ['ScriptMTBold', 'cursive'],
+        mono: ['Roboto Mono', 'monospace'],
+        arizonia: ['Arizonia', 'cursive'],
       },
       screens: {
         md: '840px',

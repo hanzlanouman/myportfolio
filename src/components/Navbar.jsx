@@ -1,15 +1,14 @@
 // Navbar.js
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className='flex justify-between items-center px-4 sm:px-6 lg:px-8 py-5 relative'>
-      <a href='/' className='text-[2.6em] text-white font-extrabold font-sans'>
-        A Cute Cat<span className='text-purple'>.</span>
-      </a>
+    <nav className='flex justify-between items-center px-4 sm:px-6 lg:px-8  relative'>
+      <Logo font='font-logoArfah' text='Arfah' />
       <div className='md:hidden'>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -1,0 +1,36 @@
+/* App.css */
+@keyframes dotFlashing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0s, 0.2s, 0.4s;
+  font-size: 2rem; /* Adjust the size as needed */
+  margin: 0 0.1rem;
+}
+
+/* Make sure each dot has an animation delay */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}

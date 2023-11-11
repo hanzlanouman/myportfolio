@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className='relative text-white mb-20'>
+    <div className='relative text-white mb-4'>
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4 py-16'>
         {/* Content */}
         <div className='flex flex-1 flex-col items-center lg:items-start text-center lg:text-left'>
@@ -32,7 +32,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        {/* Image within a circular frame */}
+
         <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10'>
           <div className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] 2xl:w-[32rem] 2xl:h-[32rem] rounded-full overflow-hidden border-4 border-white'>
             <img
