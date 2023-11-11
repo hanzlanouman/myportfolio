@@ -1,4 +1,3 @@
-// Footer.jsx
 import React from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import Logo from './Logo';

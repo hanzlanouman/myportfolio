@@ -1,4 +1,3 @@
-// Socials.jsx
 import React from 'react';
 import {
   FaLinkedin,

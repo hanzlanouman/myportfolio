@@ -1,4 +1,3 @@
-// Navbar.js
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from './Logo';

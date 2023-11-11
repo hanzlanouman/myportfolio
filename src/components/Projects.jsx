@@ -1,4 +1,3 @@
-// Projects.jsx
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
