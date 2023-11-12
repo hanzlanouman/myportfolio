@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { TypeAnimation } from 'react-type-animation';
 const Hero = () => {
   return (
     <div className='relative text-white mb-4'>
@@ -14,12 +14,24 @@ const Hero = () => {
           </h2>
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 '>
             I'm <span className='text-purpleLighter'>Arfah Ali</span>,
-            <span className=' mt-2'>
-              {' '}
-              your app developer and code storyteller.
-            </span>
           </h2>
-          <p className='mb-4 text-[1.3rem] text-gray-300'>
+          <TypeAnimation
+            sequence={[
+              'A Software Engineer',
+              1000,
+              'A Full Stack Developer',
+              1000,
+              'A Mobile App Developer',
+              1000,
+              'A Content Creator',
+              1000,
+            ]}
+            wrapper='span'
+            speed={40} // Adjust the speed to 55 for smoother typing
+            className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2'
+            repeat={Infinity}
+          />
+          <p className='mb-4 text-[1.1rem] text-gray-300 mt-3'>
             Welcome to Arfah's app wonderland—where your ideas don't just come
             alive, they throw a little app party!
           </p>
@@ -28,7 +40,7 @@ const Hero = () => {
           </p>
           <p className='mb-2 text-[1.2rem]'>
             I'm a software engineering student with a focus on app development.
-            <span className='text-[1.2rem] text-gray-300'>
+            <span className='text-[1.19rem] text-gray-300'>
               {' '}
               My skills in this domain have empowered me to support numerous
               clients in enhancing their sales and growing their businesses
@@ -45,11 +57,11 @@ const Hero = () => {
             Let's collaborate to turn your vision into a compelling online
             reality.
           </p> */}
-          <div className='flex flex-row justify-center lg:justify-start mt-6'>
-            <button className='bg-purple hover:bg-purpleLight font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red'>
+          <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center lg:justify-start mt-6 space-y-4 sm:space-y-0 md:space-y-0 lg:space-y-0 sm:space-x-4 md:space-x-4 lg:space-x-4'>
+            <button className='bg-purple hover:bg-purpleLight font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red w-full sm:w-auto md:w-auto lg:w-auto'>
               WORK WITH ME
             </button>
-            <button className='ml-8 bg-transparent hover:bg-purpleLight font-black border-2 border-purple text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white'>
+            <button className='bg-transparent hover:bg-purpleLight font-black border-2 border-purple hover:border-purpleLight text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white w-full sm:w-auto md:w-auto lg:w-auto'>
               Download CV
             </button>
           </div>
