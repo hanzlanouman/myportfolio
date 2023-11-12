@@ -46,10 +46,10 @@ const Hero = () => {
             reality.
           </p> */}
           <div className='flex flex-row justify-center lg:justify-start mt-6'>
-            <button className='bg-purple hover:bg-purple font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red'>
+            <button className='bg-purple hover:bg-purpleLight font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red'>
               WORK WITH ME
             </button>
-            <button className='ml-8 bg-transparent hover:bg-purple font-black border-2 border-purple text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white'>
+            <button className='ml-8 bg-transparent hover:bg-purpleLight font-black border-2 border-purple text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white'>
               Download CV
             </button>
           </div>

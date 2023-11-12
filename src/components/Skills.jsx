@@ -51,7 +51,7 @@ const Skills = () => {
               style={{ transitionDelay: `${index * 75}ms` }}
             >
               <tech.icon
-                className='text-5xl md:text-6xl lg:text-7xl hover:brightness-125 hover:scale-110'
+                className='text-5xl md:text-6xl lg:text-7xl hover:brightness-125 duration-500 hover:scale-110'
                 style={{ color: tech.color }}
               />
               <span className='mt-2 text-sm md:text-base'>{tech.label}</span>

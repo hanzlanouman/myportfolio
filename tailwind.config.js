@@ -8,6 +8,7 @@ module.exports = {
         bgDark: '#111',
         textLight: '#f5f5f5',
         purple: '#7d2ae8',
+        purpleLight: '#a454ff',
         purpleLighter: '#9f6ee8',
         instagramStart: '#fdf497',
         instagramEnd: '#d6249f',
@@ -21,6 +22,9 @@ module.exports = {
       },
       screens: {
         md: '840px',
+      },
+      transitionDuration: {
+        1500: '900ms',
       },
     },
   },
