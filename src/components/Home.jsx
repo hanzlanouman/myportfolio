@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Skills from './Skills';
@@ -10,15 +10,36 @@ import Testimonials from './Testimonials';
 import Services from './Services';
 
 const Home = () => {
+  const projectsRef = useRef(null);
+  const certificationsRef = useRef(null);
+
+  const scrollToProjects = (e) => {
+    e.preventDefault();
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToCertifications = (e) => {
+    e.preventDefault();
+    certificationsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='text-textLight px-10'>
-      <Navbar />
+      <Navbar
+        onProjectsClick={scrollToProjects}
+        onCertificationsClick={scrollToCertifications}
+      />
       <Hero />
       <Skills />
-      {/* <Services /> */}
-      <Projects />
+      {/* Uncomment if Services component is needed
+      <Services /> */}
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={certificationsRef}>
+        <Certifications />
+      </div>
       <Testimonials />
-      <Certifications />
       <Socials />
       <Footer />
     </div>

@@ -6,7 +6,7 @@ const Logo = ({ font, text }) => {
       href='/'
       className={`text-[2.8em] text-white font-extrabold tracking-wider ${font}`}
     >
-      <span className=' font-extrabold'>A</span>rfah
+      <span className=''>H</span>anzla
       <span className='text-purple font-sans text-[4rem]'>.</span>
     </a>
   );

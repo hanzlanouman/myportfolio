@@ -12,26 +12,31 @@ const Hero = () => {
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-3'>
             Hey,
           </h2>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 '>
-            I'm <span className='text-purpleLighter'>Arfah Ali</span>,
+          <h2 className='text-3xl md:text-4xl lg:text-6xl font-bold mb-2 '>
+            I'm <span className='text-purpleLighter'>Hanzla Nouman</span>,
           </h2>
-          <TypeAnimation
-            sequence={[
-              'A Software Engineer',
-              1000,
-              'A Full Stack Developer',
-              1000,
-              'A Mobile App Developer',
-              1000,
-              'A Content Creator',
-              1000,
-            ]}
-            wrapper='span'
-            speed={40} // Adjust the speed to 55 for smoother typing
-            deletionSpeed={68}
-            className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2'
-            repeat={Infinity}
-          />
+
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 '>
+            A{' '}
+            <TypeAnimation
+              sequence={[
+                'Software Engineer',
+                1000,
+                'Full Stack Developer',
+                1000,
+                'Mobile App Developer',
+                1000,
+                'Content Creator',
+                1000,
+              ]}
+              wrapper='span'
+              speed={40} // Adjust the speed to 55 for smoother typing
+              deletionSpeed={68}
+              className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 inline text-white'
+              repeat={Infinity}
+            />
+          </h2>
+
           <p className='mb-4 text-[1.1rem] text-gray-300 mt-3'>
             Welcome to Arfah's app wonderland—where your ideas don't just come
             alive, they throw a little app party!
