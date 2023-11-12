@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgDark: '#111',
+        bgDark: '#090909',
         textLight: '#f5f5f5',
         purple: '#7d2ae8',
         purpleLight: '#a454ff',
@@ -20,6 +20,7 @@ module.exports = {
         mono: ['Roboto Mono', 'monospace'],
         arizonia: ['Arizonia', 'cursive'],
       },
+
       screens: {
         md: '840px',
       },

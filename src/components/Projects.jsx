@@ -38,7 +38,7 @@ const Projects = () => {
   });
 
   return (
-    <div className='bg-[#121212] text-white py-12'>
+    <div className='bg-bgDark text-white py-12'>
       <div className='container mx-auto px-6'>
         <div ref={ref}>
           <h2 className='text-4xl font-bold text-center mb-16'>

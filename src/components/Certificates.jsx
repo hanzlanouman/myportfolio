@@ -29,7 +29,7 @@ const Certifications = () => {
   });
 
   return (
-    <div className='bg-[#121212] text-white py-10'>
+    <div className='bg-bgDark text-white py-10'>
       <div className='container mx-auto px-4'>
         <div ref={ref}>
           <h2 className='text-4xl font-bold text-center mb-6'>

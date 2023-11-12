@@ -28,6 +28,7 @@ const Hero = () => {
             ]}
             wrapper='span'
             speed={40} // Adjust the speed to 55 for smoother typing
+            deletionSpeed={68}
             className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2'
             repeat={Infinity}
           />
