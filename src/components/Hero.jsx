@@ -3,31 +3,54 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className='relative text-white mb-4'>
-      <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4 py-16'>
+      <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-0 py-12'>
         {/* Content */}
         <div className='flex flex-1 flex-col items-center lg:items-start text-center lg:text-left'>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6'>
-            Elevate Your Platform with Cutting-edge{' '}
-            <span className=''>Web Development</span>
+          {/* <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6'>
+            WELCOME TO MY WORLD!
+          </h1> */}
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-3'>
+            Hey,
           </h2>
-          <p className='mb-4 text-[1.2rem] text-gray-300'>
-            Innovative and efficient web solutions are pivotal for business
-            growth. As a seasoned Web Developer, I craft immersive experiences
-            that captivate and engage.
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 '>
+            I'm <span className='text-purpleLighter'>Arfah Ali</span>,
+            <span className=' mt-2'>
+              {' '}
+              your app developer and code storyteller.
+            </span>
+          </h2>
+          <p className='mb-4 text-[1.3rem] text-gray-300'>
+            Welcome to Arfah's app wonderland—where your ideas don't just come
+            alive, they throw a little app party!
           </p>
-          <p className='mb-4 text-[1.2rem]'>
-            My approach integrates responsive design, optimized performance, and
-            user-centric functionality to empower your brand's digital identity.
-            Partner with me to create a web presence that not only looks
-            exceptional but also drives success.
+          <p className='mb-2 text-[1.5rem]'>
+            Who am I<span className='text-purpleLighter text-3xl'> ?</span>
           </p>
-          <p className='mb-6 text-[1.2rem] text-gray-300'>
+          <p className='mb-2 text-[1.2rem]'>
+            I'm a software engineering student with a focus on app development.
+            <span className='text-[1.2rem] text-gray-300'>
+              {' '}
+              My skills in this domain have empowered me to support numerous
+              clients in enhancing their sales and growing their businesses
+              through captivating mobile applications. As mobile usage continues
+              to rise, having a top-notch app is crucial to connect with your
+              target audience. That's why selecting an expert in the field
+              matters. I'm committed to delivering outstanding work on time and
+              within your budget. If you have any questions or want to discuss a
+              project, feel free to reach out. I'm here to assist you and wish
+              you an amazing day.
+            </span>
+          </p>
+          {/* <p className='mb-6 text-[1.2rem] text-gray-300'>
             Let's collaborate to turn your vision into a compelling online
             reality.
-          </p>
-          <div className='flex justify-center lg:justify-start mt-6'>
-            <button className='bg-black hover:bg-purple font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red'>
+          </p> */}
+          <div className='flex flex-row justify-center lg:justify-start mt-6'>
+            <button className='bg-purple hover:bg-purple font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red'>
               WORK WITH ME
+            </button>
+            <button className='ml-8 bg-transparent hover:bg-purple font-black border-2 border-purple text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white'>
+              Download CV
             </button>
           </div>
         </div>

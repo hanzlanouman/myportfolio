@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className='flex justify-between items-center px-4 sm:px-6 lg:px-8  relative'>
+    <nav className='flex justify-between items-center  relative'>
       <Logo font='font-logoArfah' text='Arfah' />
       <div className='md:hidden'>
         <button

@@ -9,7 +9,7 @@ import Certifications from './Certificates';
 
 const Home = () => {
   return (
-    <div className='text-textLight'>
+    <div className='text-textLight px-10'>
       <Navbar />
       <Hero />
       <Skills />

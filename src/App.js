@@ -19,7 +19,7 @@ function App() {
     >
       {loading && (
         <div className='absolute inset-0 flex flex-col items-center justify-center'>
-          <span className='text-white text-5xl font-bold font-mono tracking-widest'>
+          <span className='text-white text-6xl font-bold font-mono tracking-widest'>
             ARFAH
           </span>
           <div className='loading-dots'>

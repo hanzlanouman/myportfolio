@@ -41,7 +41,7 @@ const Projects = () => {
     <div className='bg-[#121212] text-white py-12'>
       <div className='container mx-auto px-6'>
         <div ref={ref}>
-          <h2 className='text-4xl font-bold text-center mb-6'>
+          <h2 className='text-4xl font-bold text-center mb-16'>
             Projects
             <div
               className={`h-1 bg-white transition-all duration-700 ${
@@ -51,7 +51,7 @@ const Projects = () => {
             />
           </h2>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6'>
           {projects.map((project, index) => (
             <a
               href={project.githubLink}
