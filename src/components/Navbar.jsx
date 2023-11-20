@@ -47,7 +47,7 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
         </a>
         <button
           className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:bg-purpleLighter hover:text-gray-300 hover:shadow-xl hover:-translate-y-1'
-          style={{ width: '100%', textAlign: 'center' }}
+          style={{ width: 'calc(100% - 2rem)', textAlign: 'center', marginLeft: '1rem', marginRight: '1rem' }}
         >
           Get In Touch
         </button>
