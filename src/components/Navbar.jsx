@@ -22,10 +22,10 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
       </div>
       <div
         className={`${
-          isMenuOpen ? 'flex' : 'hidden'
-        } flex-col md:flex-row md:flex items-center absolute md:relative w-full md:w-auto transition-all duration-300 ease-in ${
-          isMenuOpen ? 'top-16 opacity-100' : 'top-[-490px] opacity-0'
-        } md:opacity-100 md:top-0`}
+          isMenuOpen
+            ? 'fixed left-0 top-24 w-full bg-black z-10 h-72 flex flex-col justify-start'
+            : 'hidden'
+        } md:flex md:flex-row justify-start items-start transition-all duration-300 ease-in`}
       >
         <button
           onClick={onProjectsClick}
@@ -45,7 +45,10 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
         >
           Blog
         </a>
-        <button className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:[#709ff] hover:text-gray-50 hover:shadow-xl hover:-translate-y-1'>
+        <button
+          className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:bg-purpleLighter hover:text-gray-300 hover:shadow-xl hover:-translate-y-1'
+          style={{ width: 'calc(100% - 2rem)', textAlign: 'center', marginLeft: '1rem', marginRight: '1rem' }}
+        >
           Get In Touch
         </button>
       </div>
