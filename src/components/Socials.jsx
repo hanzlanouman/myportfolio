@@ -68,11 +68,11 @@ const Socials = () => {
               href={social.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex flex-col items-center transition-transform duration-300 ease-in-out hover:scale-110'
+              className='flex flex-col items-center transition-transform duration-300 ease-in-out hover:scale-110  '
               aria-label={social.label}
             >
               <social.icon
-                className='text-6xl'
+                className='text-6xl '
                 style={{ color: social.color }}
               />
             </a>

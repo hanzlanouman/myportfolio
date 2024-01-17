@@ -1,5 +1,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import GlowingButton from '../buttons/GlowButton';
+import GlowingButtonOutlined from '../buttons/GlowButtonOutlined';
 const Hero = () => {
   return (
     <div className='relative text-white mb-4'>
@@ -13,7 +15,7 @@ const Hero = () => {
             Hey,
           </h2>
           <h2 className='text-3xl md:text-4xl lg:text-6xl font-bold mb-2 '>
-            I'm <span className='text-purpleLighter'>Hanzla Nouman</span>,
+            I'm <span className='text-purpleLighter'>Arfah Ali</span>,
           </h2>
 
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-2 '>
@@ -64,17 +66,13 @@ const Hero = () => {
             reality.
           </p> */}
           <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center lg:justify-start mt-6 space-y-4 sm:space-y-0 md:space-y-0 lg:space-y-0 sm:space-x-4 md:space-x-4 lg:space-x-4'>
-            <button className='bg-purple hover:bg-purpleLight font-black border-2 border-transparent text-white rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red w-full sm:w-auto md:w-auto lg:w-auto'>
-              WORK WITH ME
-            </button>
-            <button className='bg-transparent hover:bg-purpleLight font-black border-2 border-purple hover:border-purpleLight text-gray-400 rounded-full px-10 py-3 text-xl transition duration-300 hover:border-gradient-r-purple-pink-red hover:text-white w-full sm:w-auto md:w-auto lg:w-auto'>
-              Download CV
-            </button>
+            <GlowingButton text={'Work With me'} />
+            <GlowingButtonOutlined text={'Contact Me'} />
           </div>
         </div>
 
         <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10'>
-          <div className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] 2xl:w-[32rem] 2xl:h-[32rem] rounded-full overflow-hidden border-4 border-white'>
+          <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[30rem] xl:h-[30rem] 2xl:w-[36rem] 2xl:h-[36rem] rounded-full overflow-hidden'>
             <img
               className='object-cover object-center w-full h-full'
               src='/cuteket.jpg'

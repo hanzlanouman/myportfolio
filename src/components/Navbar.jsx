@@ -45,7 +45,7 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
         >
           Blog
         </a>
-        <button className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:bg-purpleLighter hover:text-gray-300 hover:shadow-xl hover:-translate-y-1'>
+        <button className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:[#709ff] hover:text-gray-50 hover:shadow-xl hover:-translate-y-1'>
           Get In Touch
         </button>
       </div>
