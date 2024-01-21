@@ -6,7 +6,9 @@ const GlowingButton = (props) => {
   return (
     <a
       href='https://www.linkedin.com/in/hanzlanouman'
-      className='relative z-10 px-12 py-3 text-xl text-white  rounded-full hover:opacity-100 focus:text-black focus:bg-transparent glowing-btn'
+      className='relative z-10 px-12 py-3 text-xl text-white  rounded-full hover:opacity-100 focus:bg-transparent glowing-btn 
+
+      '
     >
       {text}
     </a>

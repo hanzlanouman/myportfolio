@@ -91,7 +91,7 @@ const Hero = () => {
           </p> */}
           <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center lg:justify-start mt-6 space-y-4 sm:space-y-0 md:space-y-0 lg:space-y-0 sm:space-x-4 md:space-x-4 lg:space-x-4'>
             <GlowingButton text={'Work With me'} />
-            <GlowingButtonOutlined text={'Contact Me'} />
+            <GlowingButtonOutlined text={'Download CV'} />
           </div>
         </div>
 
