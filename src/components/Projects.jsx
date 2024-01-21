@@ -7,38 +7,37 @@ const projects = [
     title: 'Dev Portfolio',
     description:
       'A Developer Portfolio website made in React. Fully customizable and dynamic.',
-    image: 'https://source.unsplash.com/random/900x900?tech',
-    githubLink: 'https://github.com/yourusername/project-one',
-    liveLink: 'https://project-one-live-link.com',
+    image: '/dev-portfolio.png',
+    githubLink: 'https://github.com/hanzlanouman/new-portfolio',
+    // liveLink: 'https://project-one-live-link.com',
     tech: ['React', 'TailwindCSS', 'Firebase'],
   },
   {
-    title: 'Caring - Cab Share App',
-    description: 'A Cab Sharing web app made using Django for VT Students.',
-    image: 'https://source.unsplash.com/random/900x900?tech',
-    githubLink: 'https://github.com/yourusername/project-two',
-    liveLink: 'https://project-two-live-link.com',
-    tech: ['Django', 'Bootstrap', 'PostgreSQL'],
+    title: 'Societalize - Social Network App',
+    description: 'A Campus Social Network made with React Native & Firebase.',
+    image: '/societalize.png',
+    githubLink: 'https://github.com/hanzlanouman/societalize',
+
+    tech: ['React Native', 'Firebase', 'React Navigation', 'Expo'],
   },
   {
-    title: 'Quiet Hours App',
-    description:
-      'An Android app that automatically silences your phone during class hours.',
-    image: 'https://source.unsplash.com/random/900x900?tech',
-    githubLink: 'https://github.com/yourusername/project-three',
-    liveLink: 'https://project-three-live-link.com',
-    tech: ['Java', 'Android SDK', 'SQLite'],
+    title: 'E-Commerce Web App',
+    description: ' A fully functional E-Commerce Web App made with MERN Stack.',
+    image: '/ecomm.png',
+    githubLink: 'https://github.com/hanzlanouman/kidzwear',
+    // liveLink: 'https://project-three-live-link.com',
+    tech: ['React', 'Tailwind', 'MongoDB', 'Express', 'Node'],
   },
 ];
 
 const Projects = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   return (
-    <div className='bg-bgDark text-white py-12'>
+    <div className='bg-bgDark text-white py-16'>
       <div className='container mx-auto px-6'>
         <div ref={ref}>
           <h2 className='text-4xl font-bold text-center mb-16'>
@@ -60,12 +59,13 @@ const Projects = () => {
             >
               <div
                 key={index}
-                className='bg-[#1a1a1b] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-500 hover:scale-105'
+                className='bg-[#1a1a1b] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.03]'
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className='w-full h-64 object-cover'
+                  className='w-full h-64 object-contain gradien bg-[#ededed]
+                  '
                 />
                 <div className='p-4'>
                   <h3 className='text-2xl font-semibold mb-4'>
@@ -95,15 +95,17 @@ const Projects = () => {
                       <FaGithub className='mr-2' />
                       GitHub
                     </a>
-                    <a
-                      href={project.liveLink}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='flex items-center text-purple-500 hover:text-purple-300 transition-colors duration-300 px-2 hover:bg-gray-500 rounded'
-                    >
-                      <FaExternalLinkAlt className='mr-2' />
-                      Live
-                    </a>
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center text-purple-500 hover:text-purple-300 transition-colors duration-300 px-4 py-1 hover:bg-gray-500 rounded-full'
+                      >
+                        <FaExternalLinkAlt className='mr-2' />
+                        Live
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

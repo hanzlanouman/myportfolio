@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 const testimonialsData = [
   {
     id: 1,
     name: 'Mukhtiar Zamin',
     handle: '@mukhtiarzamin',
-    avatar: 'https://source.unsplash.com/random/128x128?sig=1',
+    avatar: 'https://source.unsplash.com/random/128x128?sig=2',
     testimonial:
       'You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.',
     hashtag: '#gettingtheidea',
@@ -14,7 +15,7 @@ const testimonialsData = [
     id: 2,
     name: 'Hanzla',
     handle: '@hanzla',
-    avatar: 'https://source.unsplash.com/random/128x128?sig=1',
+    avatar: 'https://source.unsplash.com/random/128x128?sig=3',
     testimonial:
       'You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.',
     hashtag: '#YesorNo',
@@ -46,7 +47,7 @@ const TestimonialCard = ({ name, handle, avatar, testimonial, hashtag }) => {
           <p className='text-sm text-gray-400'>{handle}</p>
         </div>
         {/* Add Twitter Icon that sticks to the right and size slightly bigger */}
-        <FaTwitter
+        <FaLinkedin
           className='ml-auto text-blue-400'
           style={{
             fontSize: '1.7rem',
@@ -70,14 +71,23 @@ const TestimonialCard = ({ name, handle, avatar, testimonial, hashtag }) => {
 };
 
 const Testimonials = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   return (
     <section className='py-12'>
       <div className='container mx-auto px-20'>
         <div className='text-center mb-12'>
-          <h2 className='text-4xl font-semibold text-white'>
+          <h2 className='text-4xl font-semibold text-white' ref={ref}>
             What our customers say
           </h2>
-          <p className='text-gray-400 mt-4'>They have a lot to say...</p>
+          <div
+            className={`h-1 bg-white transition-all duration-700 ${
+              inView ? 'w-[31em]' : 'w-0'
+            } mx-auto mt-2`}
+            style={{ transitionDelay: '300ms' }}
+          />
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20'>
           {testimonialsData.map((testimonial) => (

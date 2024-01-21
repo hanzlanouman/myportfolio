@@ -9,9 +9,9 @@ const Footer = () => {
       <div className='container  py-0'>
         <div className='flex flex-wrap justify-between items-center'>
           <div className='w-full lg:w-1/2 mb-6 lg:mb-0'>
-            <Logo font='font-logoArfah' text='Arfah' />
+            <Logo font='font-logoArfah' text='Hanzla' />
             <p className='mt-[-23px] mb-5 text-[0.8em] mx-[9px]'>
-              Your Coding Girl<span className='text-purple text-xl'>.</span>
+              Your Coding Guy.<span className='text-purple text-xl'>.</span>
             </p>
             <h2 className='text-3xl font-bold mb-4'>Contact Me</h2>
             <form className='space-y-4 max-w-md mb-6'>
@@ -47,34 +47,26 @@ const Footer = () => {
             <ul className='space-y-4'>
               <li className='flex justify-end items-center'>
                 <FaPhone className='mr-2' />
-                <span>+92 314 1481 947</span>
+                <span>+92 324 9163 579</span>
               </li>
               <li className='flex justify-end items-center'>
                 <FaMapMarkerAlt className='mr-2' />
-                <span>Arfah Ali, Islamabad, Pakistan</span>
+                <span>Hanzla Nouman, Abbottabad, Pakistan</span>
               </li>
               <li className='flex justify-end items-center'>
                 <FaEnvelope className='mr-2' />
-                <span>someemail@mail.com</span>
+                <span>hanzlanouman@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className='border-t border-gray-700 text-center  pt-3'>
-          <p className='text-sm'>
-            © {new Date().getFullYear()} Arfah. All Rights Reserved.
+          <p className='text-md'>Made with ❤️ by Hanzla.</p>
+
+          <p className='text-sm mt-1'>
+            {' '}
+            All Rights Reserved© {new Date().getFullYear()}
           </p>
-          <nav className='mt-2'>
-            <a href='#privacy' className='text-sm mr-4 hover:underline'>
-              Privacy Policy
-            </a>
-            <a href='#terms' className='text-sm mr-4 hover:underline'>
-              Terms of Service
-            </a>
-            <a href='#contact' className='text-sm hover:underline'>
-              Contact
-            </a>
-          </nav>
         </div>
       </div>
     </footer>

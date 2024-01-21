@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from './Logo';
 
-const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
+const Navbar = ({
+  onProjectsClick,
+  onCertificationsClick,
+  onTestimonialsClick,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -12,7 +16,7 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
 
       '
     >
-      <Logo font='font-logoArfah' text='Arfah' />
+      <Logo font='font-logoArfah' text='Hanzla' />
       <div className='md:hidden'>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,12 +48,13 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
         >
           Certifications
         </button>
-        <a
-          href='/blog'
-          className='text-white px-5 py-2 text-[1.15em] pr-10 hover:text-gray-300 hover:shadow-xs hover:-translate-y-[0.09em]'
+        <button
+          onClick={onTestimonialsClick}
+          className='text-white px-5 py-2 text-[1.15em] hover:text-gray-300 hover:shadow-xs hover:-translate-y-[0.09em]'
         >
-          Blog
-        </a>
+          Testimonials
+        </button>
+
         <button
           className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:bg-purpleLighter hover:text-gray-300 hover:shadow-xl hover:-translate-y-1'
           style={{
@@ -57,6 +62,9 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
             textAlign: 'center',
             marginLeft: '1rem',
             marginRight: '1rem',
+          }}
+          onClick={() => {
+            window.open('https://linkedin.com/in/hanzlanouman', '_blank');
           }}
         >
           Get In Touch

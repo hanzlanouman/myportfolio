@@ -12,6 +12,7 @@ import Services from './Services';
 const Home = () => {
   const projectsRef = useRef(null);
   const certificationsRef = useRef(null);
+  const testimonialsRef = useRef(null);
 
   const scrollToProjects = (e) => {
     e.preventDefault();
@@ -22,12 +23,17 @@ const Home = () => {
     e.preventDefault();
     certificationsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  const scrollToTestimonials = (e) => {
+    e.preventDefault();
+    testimonialsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className='text-textLight px-10'>
       <Navbar
         onProjectsClick={scrollToProjects}
         onCertificationsClick={scrollToCertifications}
+        onTestimonialsClick={scrollToTestimonials}
       />
       <Hero />
       <Skills />
@@ -39,7 +45,9 @@ const Home = () => {
       <div ref={certificationsRef}>
         <Certifications />
       </div>
-      <Testimonials />
+      <div ref={testimonialsRef}>
+        <Testimonials />
+      </div>
       <Socials />
       <Footer />
     </div>

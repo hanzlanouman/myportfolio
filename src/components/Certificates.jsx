@@ -4,32 +4,32 @@ import { useInView } from 'react-intersection-observer';
 const certifications = [
   {
     title: 'Certified React Developer',
-    organization: 'Microsoft',
-    image: 'https://source.unsplash.com/random/300x200?certificate',
-    link: 'https://example.com/certification',
-  },
-  {
-    title: 'Full Stack Web Development',
-    organization: 'Google',
-    image: 'https://source.unsplash.com/random/300x200?certificate',
-    link: 'https://example.com/certification',
-  },
-  {
-    title: 'Advanced CSS and Sass',
     organization: 'Meta',
-    image: 'https://source.unsplash.com/random/300x200?certificate',
-    link: 'https://example.com/certification',
+    image: '/react.png',
+    link: 'https://coursera.org/verify/VB6Z6WUQEYYU',
+  },
+  {
+    title: 'Certified React Native Developer',
+    organization: 'Meta',
+    image: '/react-native.png',
+    link: 'https://coursera.org/verify/DLWM5VUFDFET',
+  },
+  {
+    title: 'Certified UI/UX Designer',
+    organization: 'Google',
+    image: 'UI.png',
+    link: 'https://coursera.org/verify/MAZWVPPMXEEA',
   },
 ];
 
 const Certifications = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   return (
-    <div className='bg-bgDark text-white py-10'>
+    <div className='bg-bgDark text-white py-10 mb-20 mt-20'>
       <div className='container mx-auto px-4'>
         <div ref={ref}>
           <h2 className='text-4xl font-bold text-center mb-6'>
@@ -37,7 +37,7 @@ const Certifications = () => {
             <div
               className={`h-1 bg-white transition-all duration-700 ${
                 inView ? 'w-[10em] md:w-[8em]' : 'w-0'
-              } mx-auto mt-2`}
+              } mx-auto mt-2 mb-16`}
               style={{ transitionDelay: '300ms' }}
             />
           </h2>
@@ -57,16 +57,16 @@ const Certifications = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className='w-full h-64 object-cover'
+                  className='w-full h-64 object-contain bg-white'
                 />
                 <div className='p-4'>
                   <h3 className='text-2xl font-semibold mb-2'>{cert.title}</h3>
-                  <p className='mb-4'>{cert.organization}</p>
+                  <p className='mb-5'>{cert.organization}</p>
                   <a
                     href={cert.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='hover:bg-purpleLighter bg-purple transition-colors duration-300 p-2 rounded-full text-white'
+                    className='hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white p-3'
                   >
                     View Certificate
                   </a>
