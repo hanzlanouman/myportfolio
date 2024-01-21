@@ -1,6 +1,3 @@
-* {
-  color: white;
-}
 .glowing-btn:before {
   content: '';
   background: linear-gradient(
