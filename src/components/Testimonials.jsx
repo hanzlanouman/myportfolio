@@ -80,7 +80,7 @@ const Testimonials = () => {
       <div className='container mx-auto px-20'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl font-semibold text-white' ref={ref}>
-            What our customers say
+            Testimonials
           </h2>
           <div
             className={`h-1 bg-white transition-all duration-700 ${
