@@ -34,8 +34,8 @@ const testimonialsData = [
 
 const TestimonialCard = ({ name, handle, avatar, testimonial, hashtag }) => {
   return (
-    <div className='flex flex-col items-left p-6 bg-[#111] text-white rounded-lg shadow-lg leading-7'>
-      {/* Make it so that the image the name and handle are on the same row, like twitter tweet is  */}
+    <div className='flex flex-col items-left p-6  bg-[#111] text-white rounded-lg shadow-lg leading-7'>
+      {/* Image, name, and handle row with responsive adjustments */}
       <div className='flex items-center'>
         <img
           className='rounded-full w-16 h-16 object-cover'
@@ -46,7 +46,7 @@ const TestimonialCard = ({ name, handle, avatar, testimonial, hashtag }) => {
           <p className='font-semibold'>{name}</p>
           <p className='text-sm text-gray-400'>{handle}</p>
         </div>
-        {/* Add Twitter Icon that sticks to the right and size slightly bigger */}
+        {/* Twitter Icon with right alignment and responsive size */}
         <FaLinkedin
           className='ml-auto text-blue-400'
           style={{
@@ -55,8 +55,11 @@ const TestimonialCard = ({ name, handle, avatar, testimonial, hashtag }) => {
         />
       </div>
 
+      {/* Testimonial text with responsive margin-top */}
       <p className='mt-4 text-gray-300'>{testimonial}</p>
       <p className='text-blue-400'>{hashtag}</p>
+
+      {/* Footer icon with right alignment */}
       <div className='flex justify-end w-full pt-4'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -77,19 +80,19 @@ const Testimonials = () => {
   });
   return (
     <section className='py-12'>
-      <div className='container mx-auto px-20'>
+      <div className='container mx-auto px-2'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl font-semibold text-white' ref={ref}>
             Testimonials
           </h2>
           <div
             className={`h-1 bg-white transition-all duration-700 ${
-              inView ? 'w-[31em]' : 'w-0'
+              inView ? 'w-[15rem]' : 'w-0'
             } mx-auto mt-2`}
             style={{ transitionDelay: '300ms' }}
           />
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20'>
+        <div className='grid  grid-cols-1 lg:grid-cols-3 gap-20'>
           {testimonialsData.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}

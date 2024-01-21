@@ -49,7 +49,7 @@ const Socials = () => {
 
   return (
     <div className='text-white pt-20'>
-      <div className='container mx-auto px-4 text-center'>
+      <div className='container mx-auto px-2 text-center'>
         <div ref={ref}>
           <h2 className='text-4xl font-bold mb-6'>
             Connect with Me
