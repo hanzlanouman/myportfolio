@@ -3,6 +3,20 @@ import { TypeAnimation } from 'react-type-animation';
 import GlowingButton from '../buttons/GlowButton';
 import GlowingButtonOutlined from '../buttons/GlowButtonOutlined';
 const Hero = () => {
+  // check device type
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className='relative text-white mb-4'>
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-0 py-12'>
@@ -38,7 +52,17 @@ const Hero = () => {
               repeat={Infinity}
             />
           </h2>
-
+          {isMobile ? (
+            <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10 mt-10'>
+              <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[25rem] xl:h-[25rem] 2xl:w-[32rem] 2xl:h-[32rem]  overflow-hidden rounded-full'>
+                <img
+                  className='object-cover object-center w-full h-full'
+                  src='/hanzla.jpg'
+                  alt='Social Media Expert'
+                />
+              </div>
+            </div>
+          ) : null}
           <p className='mb-4 text-[1.1rem] text-gray-300 mt-3'>
             Welcome to Hanzla's app wonderland—where your ideas don't just come
             alive, they throw a little app party!
@@ -71,15 +95,17 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10'>
-          <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[25rem] xl:h-[25rem] 2xl:w-[32rem] 2xl:h-[32rem]  overflow-hidden rounded-full'>
-            <img
-              className='object-cover object-center w-full h-full'
-              src='/hanzla.jpg'
-              alt='Social Media Expert'
-            />
+        {!isMobile ? (
+          <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10'>
+            <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[25rem] xl:h-[25rem] 2xl:w-[32rem] 2xl:h-[32rem]  overflow-hidden rounded-full'>
+              <img
+                className='object-cover object-center w-full h-full'
+                src='/hanzla.jpg'
+                alt='Social Media Expert'
+              />
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );
