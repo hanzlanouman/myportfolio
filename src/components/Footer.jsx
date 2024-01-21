@@ -11,7 +11,7 @@ const Footer = () => {
           <div className='w-full lg:w-1/2 mb-6 lg:mb-0'>
             <Logo font='font-logoArfah' text='Hanzla' />
             <p className='mt-[-23px] mb-5 text-[0.8em] mx-[9px]'>
-              Your Coding Guy.<span className='text-purple text-xl'>.</span>
+              Your Coding Guy<span className='text-purple text-xl'>.</span>
             </p>
             <h2 className='text-3xl font-bold mb-4'>Contact Me</h2>
             <form className='space-y-4 max-w-md mb-6'>
