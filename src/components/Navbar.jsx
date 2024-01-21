@@ -12,9 +12,7 @@ const Navbar = ({
   return (
     <nav
       className='flex justify-between items-center relative
-      shadow-md bg-[#0a0a0a]
-
-      '
+      shadow-md bg-[#0a0a0a]'
     >
       <Logo font='font-logoArfah' text='Hanzla' />
       <div className='md:hidden'>
@@ -32,9 +30,9 @@ const Navbar = ({
       <div
         className={`${
           isMenuOpen
-            ? ' left-0 top-24 w-full bg-[#090909]  z-10 h-72 flex flex-col justify-start items-start'
+            ? 'absolute left-0 top-full w-full bg-[#0a0a0a] z-10 flex flex-col items-start transition-all duration-300 ease-in'
             : 'hidden'
-        } md:flex md:flex-row justify-start items-start transition-all duration-300 ease-in`}
+        } md:flex md:flex-row justify-start items-start`}
       >
         <button
           onClick={onProjectsClick}
