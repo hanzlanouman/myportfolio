@@ -6,7 +6,12 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className='flex justify-between items-center relative'>
+    <nav
+      className='flex justify-between items-center relative
+      shadow-md bg-[#0a0a0a]
+
+      '
+    >
       <Logo font='font-logoArfah' text='Arfah' />
       <div className='md:hidden'>
         <button
@@ -23,7 +28,7 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
       <div
         className={`${
           isMenuOpen
-            ? 'fixed left-0 top-24 w-full bg-black z-10 h-72 flex flex-col justify-start'
+            ? ' left-0 top-24 w-full bg-[#090909]  z-10 h-72 flex flex-col justify-start items-start'
             : 'hidden'
         } md:flex md:flex-row justify-start items-start transition-all duration-300 ease-in`}
       >
@@ -47,7 +52,12 @@ const Navbar = ({ onProjectsClick, onCertificationsClick }) => {
         </a>
         <button
           className='bg-purple text-white font-bold px-8 py-2 rounded-full transition duration-300 ease-in-out transform hover:bg-purpleLighter hover:text-gray-300 hover:shadow-xl hover:-translate-y-1'
-          style={{ width: 'calc(100% - 2rem)', textAlign: 'center', marginLeft: '1rem', marginRight: '1rem' }}
+          style={{
+            width: 'calc(100% - 2rem)',
+            textAlign: 'center',
+            marginLeft: '1rem',
+            marginRight: '1rem',
+          }}
         >
           Get In Touch
         </button>

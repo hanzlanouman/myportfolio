@@ -72,10 +72,10 @@ const Hero = () => {
         </div>
 
         <div className='flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10'>
-          <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[30rem] xl:h-[30rem] 2xl:w-[36rem] 2xl:h-[36rem] rounded-full overflow-hidden'>
+          <div className='w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[30rem] xl:h-[30rem] 2xl:w-[36rem] 2xl:h-[36rem]  overflow-hidden'>
             <img
               className='object-cover object-center w-full h-full'
-              src='/cuteket.jpg'
+              src='/Arfah-transformed(1).png'
               alt='Social Media Expert'
             />
           </div>
