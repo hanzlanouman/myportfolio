@@ -18,7 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='relative text-white mb-4'>
+    <div className='relative text-white mb-4 '>
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-0 py-12'>
         {/* Content */}
         <div className='flex flex-1 flex-col items-center lg:items-start text-center lg:text-left'>

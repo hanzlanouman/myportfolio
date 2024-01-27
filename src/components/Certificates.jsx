@@ -1,11 +1,12 @@
 import React from 'react';
+import { FaCertificate, FaMedal } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 const certifications = [
   {
-    title: 'Certified React Developer',
+    title: 'Meta Front-End Developer Certificate',
     organization: 'Meta',
-    image: '/react.png',
+    image: '/meta-front.png',
     link: 'https://coursera.org/verify/VB6Z6WUQEYYU',
   },
   {
@@ -31,8 +32,9 @@ const Certifications = () => {
   return (
     <div className='bg-bgDark text-white py-10 mb-20 mt-20'>
       <div className='container mx-auto px-4'>
-        <div ref={ref}>
-          <h2 className='text-4xl font-bold text-center mb-6'>
+        {/* ... Title Section ... */}
+        <div ref={ref} className='text-center'>
+          <h2 className='text-4xl font-bold mb-6'>
             Certifications
             <div
               className={`h-1 bg-white transition-all duration-700 ${
@@ -42,37 +44,42 @@ const Certifications = () => {
             />
           </h2>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {certifications.map((cert, index) => (
-            <a
-              href={cert.link}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-purple-500 hover:text-purple-300 transition-colors duration-300'
+            <div
+              key={index}
+              className='bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.06] h-[490px] flex flex-col'
             >
-              <div
-                key={index}
-                className='bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-500 hover:scale-105'
-              >
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className='w-full h-64 object-contain bg-white'
-                />
-                <div className='p-4'>
-                  <h3 className='text-2xl font-semibold mb-2'>{cert.title}</h3>
-                  <p className='mb-5'>{cert.organization}</p>
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className='h-64 object-contain bg-[#EFEFEF] w-full'
+              />
+              <div className='p-4 flex flex-col justify-between flex-grow'>
+                <h3 className='text-2xl font-semibold mb-2'>{cert.title}</h3>
+                <p>{cert.organization}</p>
+                <div className='flex flex-col sm:flex-row  items-center mt-2'>
                   <a
                     href={cert.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white p-3'
+                    className='inline-flex items-center justify-center hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white py-2 px-4 mb-2 sm:mb-0 sm:mr-2 text-lg sm:text-sm'
                   >
-                    View Certificate
+                    <FaCertificate className='mr-2' /> View Certificate
+                  </a>
+                  {/* Replace href with actual Credly link if available */}
+                  <a
+                    href={cert.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center justify-center hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white py-2 px-4 mb-2 sm:mb-0 sm:mr-2 text-lg sm:text-sm'
+                  >
+                    <FaMedal className='mr-2' /> View Credly
                   </a>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

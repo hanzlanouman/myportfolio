@@ -12,7 +12,7 @@ import { SiMongodb, SiMysql } from 'react-icons/si';
 
 const Skills = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   });
 

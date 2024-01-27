@@ -51,7 +51,7 @@ const Footer = () => {
               </li>
               <li className='flex justify-end items-center'>
                 <FaMapMarkerAlt className='mr-2' />
-                <span>Hanzla Nouman, Abbottabad, Pakistan</span>
+                <span>Abbottabad, Pakistan</span>
               </li>
               <li className='flex justify-end items-center'>
                 <FaEnvelope className='mr-2' />
