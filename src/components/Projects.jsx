@@ -7,7 +7,7 @@ const projects = [
     title: 'Societalize - A Social Media App',
     description:
       'A Social Media App made with React Native & Firebase. It has features like posting, commenting, liking, following, etc.',
-    image: '/Societalize.png',
+    image: '/societalize.png',
     githubLink: 'https://github.com/hanzlanouman/societalize',
     // liveLink: 'https://project-one-live-link.com',
     tech: [
