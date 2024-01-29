@@ -1,19 +1,19 @@
 import React from 'react';
-import { FaCertificate, FaMedal } from 'react-icons/fa';
+import { FaCertificate, FaExternalLinkAlt, FaMedal } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 const certifications = [
-  {
-    title: 'Meta Front-End Developer Certificate',
-    organization: 'Meta',
-    image: '/meta-front.png',
-    link: 'https://coursera.org/verify/VB6Z6WUQEYYU',
-  },
   {
     title: 'Certified React Native Developer',
     organization: 'Meta',
     image: '/react-native.png',
     link: 'https://coursera.org/verify/DLWM5VUFDFET',
+  },
+  {
+    title: 'Meta Front-End Developer Certificate',
+    organization: 'Meta',
+    image: '/meta-front.png',
+    link: 'https://coursera.org/verify/VB6Z6WUQEYYU',
   },
   {
     title: 'Certified UI/UX Designer',
@@ -49,7 +49,8 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className='bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.06] h-[490px] flex flex-col'
+              className='bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.06] h-[490px] flex flex-col cursor-pointer'
+              // onClick={() => window.open(cert.link, '_blank')}
             >
               <img
                 src={cert.image}
@@ -66,17 +67,10 @@ const Certifications = () => {
                     rel='noopener noreferrer'
                     className='inline-flex items-center justify-center hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white py-2 px-4 mb-2 sm:mb-0 sm:mr-2 text-lg sm:text-sm'
                   >
-                    <FaCertificate className='mr-2' /> View Certificate
+                    View Certificate{'   '}{' '}
+                    <FaExternalLinkAlt className='ml-2' />
                   </a>
                   {/* Replace href with actual Credly link if available */}
-                  <a
-                    href={cert.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='inline-flex items-center justify-center hover:bg-purpleLighter bg-purple transition-colors duration-300 rounded-full text-white py-2 px-4 mb-2 sm:mb-0 sm:mr-2 text-lg sm:text-sm'
-                  >
-                    <FaMedal className='mr-2' /> View Credly
-                  </a>
                 </div>
               </div>
             </div>

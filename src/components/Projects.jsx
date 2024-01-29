@@ -4,21 +4,19 @@ import { useInView } from 'react-intersection-observer';
 
 const projects = [
   {
-    title: 'Dev Portfolio',
+    title: 'Societalize - A Social Media App',
     description:
-      'A Developer Portfolio website made in React. Fully customizable and dynamic.',
-    image: '/dev-portfolio.png',
-    githubLink: 'https://github.com/hanzlanouman/new-portfolio',
+      'A Social Media App made with React Native & Firebase. It has features like posting, commenting, liking, following, etc.',
+    image: '/Societalize.png',
+    githubLink: 'https://github.com/hanzlanouman/societalize',
     // liveLink: 'https://project-one-live-link.com',
-    tech: ['React', 'TailwindCSS', 'Firebase'],
-  },
-  {
-    title: 'CampuShop - The Campus Marketplace',
-    description: 'A Campus marketplace made with React Native & Firebase.',
-    image: '/campushop.png',
-    githubLink: 'https://github.com/hanzlanouman/campushop',
-
-    tech: ['React Native', 'Firebase', 'React Navigation', 'Expo'],
+    tech: [
+      'React Native',
+      'ContextAPI',
+      'Firebase',
+      'React Navigation',
+      'Expo',
+    ],
   },
   {
     title: 'E-Commerce Web App',
@@ -27,6 +25,14 @@ const projects = [
     githubLink: 'https://github.com/hanzlanouman/kidzwear',
     // liveLink: 'https://project-three-live-link.com',
     tech: ['React', 'Tailwind', 'MongoDB', 'Express', 'Node'],
+  },
+  {
+    title: 'CampuShop - The Campus Marketplace',
+    description: 'A Campus marketplace made with React Native & Firebase.',
+    image: '/campushop.png',
+    githubLink: 'https://github.com/hanzlanouman/campushop',
+
+    tech: ['React Native', 'Firebase', 'React Navigation', 'Expo'],
   },
 ];
 
@@ -54,12 +60,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className='bg-[#1a1a1b] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.06] h-[530px] flex flex-col'
+              className='bg-[#1a1a1b] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform transition duration-900 hover:scale-[1.06] h-[530px] flex flex-col
+                
+              '
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className='h-64 object-contain bg-white w-full'
+                className='h-64 object-contain bg-[#eff9f9] w-full'
               />
               <div className='p-4 flex flex-col flex-grow'>
                 <h3 className='text-2xl font-semibold mb-4'>{project.title}</h3>
